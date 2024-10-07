@@ -16,7 +16,6 @@ const scrollReveal = function () {
 window.onload = function () {
   const audio = document.getElementById("myAudio");
   audio.currentTime = 85; 
-  audio.play();
 };
 
 window.addEventListener("scroll", scrollReveal);
