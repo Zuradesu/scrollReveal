@@ -102,4 +102,8 @@ body {
   .img-box {
     height: 400px; /* Reduce image box height for mobile */
   }
+  .audio-control {
+    display: none; /* Sembunyikan audio controls di mobile */
+  
+}
 }

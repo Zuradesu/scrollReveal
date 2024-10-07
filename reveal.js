@@ -20,3 +20,10 @@ window.onload = function () {
 };
 
 window.addEventListener("scroll", scrollReveal);
+
+document.addEventListener("DOMContentLoaded", function() {
+  const audio = document.getElementById("myAudio");
+  audio.play().catch(error => {
+      console.error("Error playing audio:", error);
+  });
+});
