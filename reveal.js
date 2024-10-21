@@ -13,16 +13,34 @@ const scrollReveal = function () {
   }
 };
 
-
 window.addEventListener("scroll", scrollReveal);
 
-document.addEventListener("DOMContentLoaded", function() {
+// Fungsi untuk memutar audio
+const playAudio = () => {
   const audio = document.getElementById("myAudio");
-
+  
+  // Mengatur waktu mulai audio ke detik ke-85
   audio.currentTime = 85;
 
+  // Memainkan audio
   audio.play().catch(error => {
-      console.error("Error playing audio:", error);
+    console.error("Error playing audio:", error);
   });
+};
+
+// Menunggu interaksi pengguna sebelum memutar audio
+let audioPlayed = false;
+
+document.addEventListener("click", () => {
+  if (!audioPlayed) {
+    playAudio();
+    audioPlayed = true; // Tandai bahwa audio telah diputar
+  }
 });
 
+document.addEventListener("scroll", () => {
+  if (!audioPlayed) {
+    playAudio();
+    audioPlayed = true; // Tandai bahwa audio telah diputar
+  }
+});
