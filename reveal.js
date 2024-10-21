@@ -13,16 +13,16 @@ const scrollReveal = function () {
   }
 };
 
-window.onload = function () {
-  const audio = document.getElementById("myAudio");
-  audio.currentTime = 85; 
-};
 
 window.addEventListener("scroll", scrollReveal);
 
 document.addEventListener("DOMContentLoaded", function() {
   const audio = document.getElementById("myAudio");
+
+  audio.currentTime = 85;
+
   audio.play().catch(error => {
       console.error("Error playing audio:", error);
   });
 });
+
